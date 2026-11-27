@@ -1,0 +1,362 @@
+/* Bargain Beacon — one stylesheet for the whole finder. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font: 17px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #17222e;
+  background: #f2f4f7;
+}
+
+a { color: #0b5d8a; }
+
+.top {
+  background: #0f2a43;
+  color: #fff;
+}
+
+.top-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 18px;
+}
+
+.brand {
+  color: #ffc53d;
+  font-size: 26px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+}
+
+.tagline {
+  font-size: 15px;
+  color: #cfe0ee;
+}
+
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 20px 40px;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 6px 0 4px;
+}
+
+.lede {
+  margin: 0 0 16px;
+  color: #46586a;
+  font-size: 16px;
+}
+
+/* ---- filter bar ---- */
+
+.filters {
+  background: #fff;
+  border: 1px solid #d7dee6;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-row input[type="search"] {
+  flex: 1 1 320px;
+  font: inherit;
+  font-size: 18px;
+  padding: 10px 14px;
+  border: 2px solid #0f2a43;
+  border-radius: 8px;
+}
+
+.search-row select {
+  font: inherit;
+  font-size: 16px;
+  padding: 10px 8px;
+  border: 2px solid #9fb0c0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.pill {
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 2px solid #9fb0c0;
+  background: #fff;
+  color: #17222e;
+  cursor: pointer;
+}
+
+.pill.on {
+  background: #0f2a43;
+  border-color: #0f2a43;
+  color: #ffc53d;
+}
+
+.count-line {
+  margin: 12px 2px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f2a43;
+}
+
+/* ---- deal grid ---- */
+
+.deals {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #d7dee6;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.store {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #0b5d8a;
+}
+
+.cat {
+  font-size: 13px;
+  color: #5c6f82;
+}
+
+.card h2 {
+  font-size: 19px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.card h2 a {
+  color: #17222e;
+  text-decoration: none;
+}
+
+.card h2 a:hover { text-decoration: underline; }
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sale {
+  font-size: 30px;
+  font-weight: 800;
+  color: #0f2a43;
+}
+
+.was {
+  font-size: 17px;
+  color: #7a8a99;
+}
+
+.off {
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  background: #c81e1e;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.score {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f2a43;
+  background: #ffe9a8;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.verdict {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+.verdict.true-low { background: #0b7a45; color: #fff; }
+.verdict.strong { background: #0b5d8a; color: #fff; }
+.verdict.routine { background: #b7791f; color: #fff; }
+.verdict.check-was { background: #9c4221; color: #fff; }
+
+.evidence {
+  margin: 0;
+  font-size: 14px;
+  color: #46586a;
+}
+
+.checked {
+  margin: 0;
+  font-size: 13px;
+  color: #7a8a99;
+}
+
+.store-link {
+  margin-top: auto;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background: #0b5d8a;
+  border-radius: 8px;
+  padding: 9px 14px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.store-link:hover { background: #084a6e; }
+
+.empty {
+  background: #fff;
+  border: 1px solid #d7dee6;
+  border-radius: 12px;
+  padding: 28px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* ---- deal detail ---- */
+
+.back { font-weight: 700; }
+
+.detail {
+  background: #fff;
+  border: 1px solid #d7dee6;
+  border-radius: 12px;
+  padding: 16px 22px;
+  margin-top: 10px;
+}
+
+.detail h1 { font-size: 28px; }
+
+.detail .price-row { margin: 8px 0 4px; }
+.detail .sale { font-size: 38px; }
+
+.detail dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 18px;
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+.detail dt { font-weight: 700; color: #0f2a43; }
+.detail dd { margin: 0; }
+
+.detail .store-link {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.compare {
+  margin-top: 14px;
+  border-top: 1px solid #d7dee6;
+  padding-top: 12px;
+}
+
+.compare h2 { font-size: 20px; margin: 0 0 6px; }
+
+.compare table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.compare th, .compare td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e4e9ef;
+}
+
+.compare th { color: #5c6f82; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+.compare .best { font-weight: 800; color: #0b7a45; }
+
+.note {
+  margin-top: 16px;
+  background: #fff8e1;
+  border: 1px solid #f0d48a;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 15px;
+}
+
+footer {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px 36px;
+  color: #5c6f82;
+  font-size: 14px;
+}
+
+/* ---- phone ---- */
+
+@media (max-width: 900px) {
+  .deals { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .brand { font-size: 22px; }
+  .tagline { font-size: 13px; }
+  h1 { font-size: 24px; }
+  .deals { grid-template-columns: 1fr; }
+  .sale { font-size: 28px; }
+  .detail .sale { font-size: 36px; }
+  .detail dl { grid-template-columns: 1fr; gap: 0 0 8px; }
+  .detail dt { margin-top: 8px; }
+  .search-row input[type="search"] { flex-basis: 100%; }
+}
